@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Python 可视化 | 沃是逆夜夜</title><meta name="author" content="琉璃幻影"><meta name="copyright" content="琉璃幻影"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="Python实现可视化一些常用的库 Matplotlib  Seaborn  Plotly 一幅图的构成   图像区域（Figure）：整个绘图区域的边界框，可以包含一个或多个子图。 子图区域（Axes）：实际绘图区域，包含坐标轴、绘制的图像和文本标签等。 坐标轴（Axis）：显示子图数据范围并提供刻度标记和标签的对象。 脊柱（Spine）：连接坐标轴和图像区域的线条，通常包括上下左右四条。 标">
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Python 可视化 | 沃是逆夜夜</title><meta name="author" content="琉璃幻影"><meta name="copyright" content="琉璃幻影"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="Python实现可视化一些常用的库 Matplotlib  Seaborn  Plotly   一幅图的构成 图像区域（Figure）：整个绘图区域的边界框，可以包含一个或多个子图。 子图区域（Axes）：实际绘图区域，包含坐标轴、绘制的图像和文本标签等。 坐标轴（Axis）：显示子图数据范围并提供刻度标记和标签的对象。 脊柱（Spine）：连接坐标轴和图像区域的线条，通常包括上下左右四条。 标">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python 可视化">
 <meta property="og:url" content="https://wlcsygdfw.zeabur.app/2024/10/28/Python-%E5%8F%AF%E8%A7%86%E5%8C%96/index.html">
 <meta property="og:site_name" content="沃是逆夜夜">
-<meta property="og:description" content="Python实现可视化一些常用的库 Matplotlib  Seaborn  Plotly 一幅图的构成   图像区域（Figure）：整个绘图区域的边界框，可以包含一个或多个子图。 子图区域（Axes）：实际绘图区域，包含坐标轴、绘制的图像和文本标签等。 坐标轴（Axis）：显示子图数据范围并提供刻度标记和标签的对象。 脊柱（Spine）：连接坐标轴和图像区域的线条，通常包括上下左右四条。 标">
+<meta property="og:description" content="Python实现可视化一些常用的库 Matplotlib  Seaborn  Plotly   一幅图的构成 图像区域（Figure）：整个绘图区域的边界框，可以包含一个或多个子图。 子图区域（Axes）：实际绘图区域，包含坐标轴、绘制的图像和文本标签等。 坐标轴（Axis）：显示子图数据范围并提供刻度标记和标签的对象。 脊柱（Spine）：连接坐标轴和图像区域的线条，通常包括上下左右四条。 标">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg">
 <meta property="article:published_time" content="2024-10-28T07:42:13.000Z">
-<meta property="article:modified_time" content="2024-10-28T09:47:45.616Z">
+<meta property="article:modified_time" content="2024-10-28T09:57:29.279Z">
 <meta property="article:author" content="琉璃幻影">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
@@ -56,7 +56,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2024-10-28 17:47:45'
+  postUpdate: '2024-10-28 17:57:29'
 }</script><script>(win=>{
       win.saveToLocal = {
         set: (key, value, ttl) => {
@@ -153,16 +153,16 @@
         }
       }
       detectApple()
-    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/niya.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 视频</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="沃是逆夜夜"><span class="site-name">沃是逆夜夜</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 视频</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Python 可视化</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-10-28T07:42:13.000Z" title="发表于 2024-10-28 15:42:13">2024-10-28</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-10-28T09:47:45.616Z" title="更新于 2024-10-28 17:47:45">2024-10-28</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>6分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Python 可视化"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://matplotlib.org/stable/_static/logo_dark.svg" alt="Matplotlib" title="Matplotlib"></p>
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/niya.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 视频</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="沃是逆夜夜"><span class="site-name">沃是逆夜夜</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 视频</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Python 可视化</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-10-28T07:42:13.000Z" title="发表于 2024-10-28 15:42:13">2024-10-28</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-10-28T09:57:29.279Z" title="更新于 2024-10-28 17:57:29">2024-10-28</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.7k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>7分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Python 可视化"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://matplotlib.org/stable/_static/logo_dark.svg" alt="Matplotlib" title="Matplotlib"></p>
 <h1 id="Python实现可视化"><a href="#Python实现可视化" class="headerlink" title="Python实现可视化"></a>Python实现可视化</h1><h2 id="一些常用的库"><a href="#一些常用的库" class="headerlink" title="一些常用的库"></a>一些常用的库</h2><ol>
 <li><p>Matplotlib</p>
 </li>
 <li><p>Seaborn</p>
 </li>
 <li><p>Plotly</p>
-<h2 id="一幅图的构成"><a href="#一幅图的构成" class="headerlink" title="一幅图的构成"></a>一幅图的构成</h2></li>
+</li>
 </ol>
-<ul>
+<h2 id="一幅图的构成"><a href="#一幅图的构成" class="headerlink" title="一幅图的构成"></a>一幅图的构成</h2><ul>
 <li>图像区域（Figure）：整个绘图区域的边界框，可以包含一个或多个子图。</li>
 <li>子图区域（Axes）：实际绘图区域，包含坐标轴、绘制的图像和文本标签等。</li>
 <li>坐标轴（Axis）：显示子图数据范围并提供刻度标记和标签的对象。</li>
@@ -215,28 +215,79 @@
 </ul>
 </li>
 <li><p>火柴图（stem plot）</p>
+<ul>
+<li>matplotlib.pyplot.stem()</li>
+</ul>
 </li>
 <li><p>阶跃图（step plot）</p>
+<ul>
+<li>matplotlib.pyplot.step()</li>
+</ul>
 </li>
 <li><p>填充（filled area）</p>
+<ul>
+<li>matplotlib.pyplot.fill_between()</li>
+</ul>
 </li>
 <li><p>堆叠面积图（stacked area）</p>
+<ul>
+<li>matplotlib.pyplot.stackplot()</li>
+</ul>
 </li>
 <li><p>显示图片（image display）</p>
+<ul>
+<li>matplotlib.pyplot.imshow()</li>
+<li>plotly.express.imshow()</li>
+</ul>
 </li>
 <li><p>平面等高线（2D contour）</p>
+<ul>
+<li>matplotlib.pyplot.contour()</li>
+<li>plotly.graph_objects.Contour()</li>
+</ul>
 </li>
 <li><p>平面填充等高线（2D filled contour）</p>
 </li>
-<li><p>箭头图（quiver plot）</p>
-</li>
-<li><p>水流图（stream plot）</p>
-</li>
-<li><p>直方图（histogram）</p>
-</li>
+</ol>
+<ul>
+<li>matplotlib.pyplot.contourf()</li>
+<li>plotly.graph_objects.Contour()</li>
+</ul>
+<ol start="11">
+<li>箭头图（quiver plot）</li>
+</ol>
+<ul>
+<li>matplotlib.pyplot.quiver()</li>
+<li>plotly.figure_factory.create_quiver()</li>
+</ul>
+<ol start="12">
+<li>水流图（stream plot）</li>
+</ol>
+<ul>
+<li>matplotlib.pyplot.streamplot()</li>
+<li>plotly.figure_factory.create_streamline()</li>
+</ul>
+<ol start="13">
+<li>直方图（histogram）</li>
+</ol>
+<ul>
+<li>matplotlib.pyplot.hist()</li>
+<li>plotly.express.histogram()</li>
+<li>seaborn.histplot()</li>
+</ul>
+<ol start="14">
 <li><p>二元直方热图（2D histogram）</p>
+<ul>
+<li>matplotlib.pyplot.hist2d()</li>
+<li>seaborn.histplot()</li>
+<li>plotly.express.density_heatmap()</li>
+</ul>
 </li>
 <li><p>核密度估计（KDE plot）</p>
+<ul>
+<li>seaborn.kdeplot()</li>
+<li>plotly.figure_factory.create_displot()</li>
+</ul>
 </li>
 <li><p>二维核密度估计（2D KDE plot）</p>
 </li>
